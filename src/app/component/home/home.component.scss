@@ -1,0 +1,28 @@
+section{
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  div{
+    height: 45%;
+    background-color: #4A4A4A;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+      color: white;
+    }
+    h4{
+      color: grey;
+    }
+    button{
+      display: block;
+      width: 20%;
+      margin: 0 auto;
+      padding: 1rem;
+      background-color: #FFF130;
+      border-radius: 10px;
+    }
+  }
+}

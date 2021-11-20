@@ -1,0 +1,17 @@
+ul{
+  display: flex;
+  background-color: black;
+  padding: 1rem 0;
+  li{
+    color: white;
+    margin: 0 1rem;
+    a{
+        text-decoration: none;
+        color: white;
+        &:focus{
+          color: rgb(236, 236, 158);
+        }
+    }
+
+  }
+}

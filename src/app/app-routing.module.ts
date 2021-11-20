@@ -4,6 +4,7 @@ import { ArticleComponent } from './component/article/article.component';
 import { HomeComponent } from './component/home/home.component';
 import { NotfoundComponent } from './component/notfound/notfound.component';
 import { PostComponent } from './component/post/post.component';
+// import { PostComponent } from './component/post/post.component';
 
 const routes: Routes = [
   // { path: '', loadChildren: 'src/app/app.module#AppModule' },
@@ -11,7 +12,9 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent },
   { path: 'article', component: ArticleComponent },
-  { path: 'post:id', component: PostComponent },
+
+  // { path: 'post', component: PostComponent },
+  { path: 'post/:id', component: PostComponent },
   { path: '**', component: NotfoundComponent }
 
 

@@ -1,0 +1,23 @@
+.container{
+  width: 80%;
+  margin: auto;
+  border: 1px solid red;
+ul{
+
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+  li{
+    // flex: 1;
+    max-width: 30%;
+    background-color: white;
+    position: relative;
+    margin: .5rem;
+img{
+  display: block;
+  margin: 0 auto;
+}
+  }
+}
+
+}

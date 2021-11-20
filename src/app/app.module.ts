@@ -8,6 +8,7 @@ import { HomeComponent } from './component/home/home.component';
 import { ArticleComponent } from './component/article/article.component';
 import { PostComponent } from './component/post/post.component';
 import { NotfoundComponent } from './component/notfound/notfound.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NotfoundComponent } from './component/notfound/notfound.component';
     HomeComponent,
     ArticleComponent,
     PostComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
