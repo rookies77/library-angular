@@ -6,9 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
 import { ArticleComponent } from './component/article/article.component';
-import { PostComponent } from './component/post/post.component';
+import { PostComponent } from './component/article/post/post.component';
 import { NotfoundComponent } from './component/notfound/notfound.component';
 import { HeaderComponent } from './header/header.component';
+import { PostsService } from './providers/posts.service';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { HeaderComponent } from './header/header.component';
     CommonModule,
 
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
