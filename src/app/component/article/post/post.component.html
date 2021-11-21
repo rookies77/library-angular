@@ -6,13 +6,13 @@
   </div>
   <div class="form__wrapper">
     <form (submit)="onSubmit(form)" #form>
-      <input type="text" name="value" [(ngModel)]="commentaire" placeholder="Ecricre un commentaire">
+      <input type="text" name="value" [(ngModel)]="commentaire" placeholder="Ecrire un commentaire">
       <button type="submit">Ajouter</button>
     </form>
 
     <ul>
       <h4>Liste des commentaires:</h4>
-      <li *ngFor="let comment of commentaires">
+      <li *ngFor="let comment of commentaires;let i = index ">
         <p>{{comment}}</p>
       </li>
     </ul>

@@ -13,8 +13,8 @@ export class PostComponent implements OnInit {
     src: '',
     content: '',
   }
-commentaire: string = '';
-commentaires: string[]= [];
+  commentaire: string = '';
+  commentaires: string[] = [];
   public comments: any[] = [
     { id: 1, post_id: 1, content: "..." },
     { id: 2, post_id: 2, content: "..." },
@@ -25,15 +25,15 @@ commentaires: string[]= [];
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id']
-
+    this.post.id = this.postsService.getArticle(+id).id;
     this.post.title = this.postsService.getArticle(+id).label;
     this.post.src = this.postsService.getArticle(+id).src;
     this.post.content = this.postsService.getArticle(+id).content;
 
   }
-onSubmit(f: any){
+  onSubmit(f: any) {
 
-  this.commentaires.push(this.commentaire)
-  this.commentaire = "";
-}
+    this.commentaires.push(this.commentaire)
+    this.commentaire = "";
+  }
 }
