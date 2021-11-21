@@ -1,4 +1,12 @@
+nav{
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 34;
+}
+
 ul{
+margin: 0;
   display: flex;
   background-color: black;
   padding: 1rem 0;

@@ -1,1 +1,21 @@
-<p>post worksazdzadazdazdazdaz!</p>
+<section class="container">
+  <div class="container__wrapper">
+    <h1>{{ post.title }}</h1>
+    <img src="{{ post.src }}" alt="">
+    <p>{{ post.content }}</p>
+  </div>
+  <div class="form__wrapper">
+    <form (submit)="onSubmit(form)" #form>
+      <input type="text" name="value" [(ngModel)]="commentaire" placeholder="Ecricre un commentaire">
+      <button type="submit">Ajouter</button>
+    </form>
+
+    <ul>
+      <h4>Liste des commentaires:</h4>
+      <li *ngFor="let comment of commentaires">
+        <p>{{comment}}</p>
+      </li>
+    </ul>
+  </div>
+
+</section>

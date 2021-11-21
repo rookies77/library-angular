@@ -10,6 +10,9 @@ import { PostComponent } from './component/article/post/post.component';
 import { NotfoundComponent } from './component/notfound/notfound.component';
 import { HeaderComponent } from './header/header.component';
 import { PostsService } from './providers/posts.service';
+import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -19,12 +22,15 @@ import { PostsService } from './providers/posts.service';
     ArticleComponent,
     PostComponent,
     NotfoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
+    FormsModule,
+    FontAwesomeModule
 
   ],
   providers: [PostsService],
