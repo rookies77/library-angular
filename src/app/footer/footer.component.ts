@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,9 +13,20 @@ export class FooterComponent implements OnInit {
   suivant: number = 2;
 
   faHome = faHome;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  back() {
+    this.suivant -= 1;
+    this.precedent -= 1;
+    if (this.precedent == 1)
+      this.router.navigate(['']);
+  }
+  next() {
+    this.suivant += 1;
+    this.precedent += 1;
+    if (this.suivant == 3)
+      this.router.navigate(['article']);
+  }
 }

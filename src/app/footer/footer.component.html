@@ -3,13 +3,13 @@
     <a href="./"><i class="fas fa-home"></i></a>
   </li>
   <li>
-      <button><i class="fas fa-chevron-left"></i></button>
+      <button (click)="back()" [disabled]="precedent <=1"><i class="fas fa-chevron-left"></i></button>
   </li>
   <li>
     <span>{{ precedent }}</span>
   </li>
   <li>sur</li>
   <li>{{ suivant }}</li>
-  <li><button><i class="fas fa-chevron-right"></i></button></li>
+  <li><button (click)="next()" [disabled]="suivant >= 3"><i class="fas fa-chevron-right"></i></button></li>
 
 </ul>
