@@ -7,13 +7,10 @@ import { PostComponent } from './component/article/post/post.component';
 // import { PostComponent } from './component/post/post.component';
 
 const routes: Routes = [
-  // { path: '', loadChildren: 'src/app/app.module#AppModule' },
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+
 
   { path: '', component: HomeComponent },
   { path: 'article', component: ArticleComponent },
-
-  // { path: 'post', component: PostComponent },
   { path: 'article/:id', component: PostComponent },
   { path: '**', component: NotfoundComponent }
 

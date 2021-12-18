@@ -9,7 +9,7 @@ import { PostsService } from 'src/app/providers/posts.service';
 })
 export class PostComponent implements OnInit {
   post: any = {
-    title: '',
+    label: '',
     src: '',
     content: '',
   }
@@ -25,14 +25,14 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params['id']
-    this.post.id = this.postsService.getArticle(+id).id;
-    this.post.title = this.postsService.getArticle(+id).label;
-    this.post.src = this.postsService.getArticle(+id).src;
-    this.post.content = this.postsService.getArticle(+id).content;
+    // this.post.id = this.postsService.getArticle(+id).id;
+    // this.post.title = this.postsService.getArticle(+id).label;
+    // this.post.src = this.postsService.getArticle(+id).src;
+    // this.post.content = this.postsService.getArticle(+id).content;
+    this.post = this.postsService.getArticle(+id)
 
   }
   onSubmit(f: any) {
-
     this.commentaires.push(this.commentaire)
     this.commentaire = "";
   }

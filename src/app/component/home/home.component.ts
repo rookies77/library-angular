@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.title = 'Bienvenue sur votre page d\'accueil';
-    this.subtitle = 'Test Technique pour les developpeurs Angular, Reacr ou Vuejs';
+    this.subtitle = 'Blog';
   }
   redirectTo(){
     this.router.navigate(['article']);
